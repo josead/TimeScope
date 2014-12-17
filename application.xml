@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="TimeScope" package="com.togglegames.timeScope" version="1.0.0" company="Dario Fernandez Torre" />
+	
+	<!-- output -->
+	<app main="Main" file="TimeScope" path="bin" />
+	
+	<!--<window background="#000000" fps="60" />
+	<window width="540" height="960" unless="mobile" />
+	<window orientation="portrait" vsync="false" antialiasing="0" if="cpp" />
+	-->
+	<window width="540" height="960" fps="60" orientation="portrait" resizable="true" background="#000000" />
+	<window width="0" height="0" if="fullscreen" />
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+	
+	<!-- assets -->
+	<assets path="assets/img" rename="img" include="*" />	
+	<assets path="assets/audio" rename="audio" type="audio" include="*" />
+	<assets path="assets/audio/music" rename="music" type="audio" include="*" />
+	
+	<icon path="assets/36.png" size="36" if="android" />
+	<icon path="assets/48.png" size="48" if="android" />
+	<icon path="assets/72.png" size="72" if="android" />
+	<icon path="assets/96.png" size="96" if="android" />
+	
+	<!-- optimize output
+	<haxeflag name="-dce full" /> -->
+	
+</project>
